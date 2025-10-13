@@ -1,0 +1,46 @@
+###This script helps me remove the DMPC piercing the ring, and the output is a clean structure.
+###The number of DMPC residues within a distance of 0.22 nm from the protein (DNA + peptide) will be printed before and after.
+#input:
+GRO="nanodisc_bilayer_310K_box_center_clean_box_min1.gro"
+TPR="nanodisc_bilayer_310K_box_center_clean_box_min1.tpr"
+name="nanodisc_bilayer_310K_final_clean"
+#gmx make_ndx -f "$GRO" -o "$NDX"<<EOF
+#1 & r PHE & a CG CD1 CD2 CE1 CE2 CZ
+#1 & r TYR & a CG CD1 CD2 CE1 CE2 CZ
+#1 & r TRP & a CG CD1 CD2 NE1 CE2 CE3 CZ2 CZ3 CH2
+#q
+#EOF
+#gmx make_ndx -f "$GRO" -o "$NDX" -n "$NDX"
+#remove_Residues="remove.ndx"
+#
+#gmx select -f "$GRO" \
+#           -s "$TPR" \
+#           -n "$NDX"\
+#           -select 'group "DMPC" and same residue as within 0.225 of group "rings"'\
+#           -on "$remove_Residues" 
+#
+####Write cleaned structure
+#gmx editconf -f "$GRO"  -n  "$remove_Residues" -o  "remove_Residues_${name}.gro"
+#gmx editconf -f "$GRO" -o "original_${name}.gro"
+#
+#
+## Step 4: Count DMPC residues before and after
+#
+#
+#awk 'substr($0,6,4)=="DMPC"{r[substr($0,1,5)]++} END{print "Number of DMPC before removing DMPC:",length(r)}' "original_${name}.gro"
+#awk 'substr($0,6,4)=="DMPC"{r[substr($0,1,5)]++} END{print "How many DMPC must be deleted:",length(r)}' "remove_Residues_${name}.gro"
+## Extract DMPC residue IDs from original.gro
+#awk 'substr($0,6,4)=="DMPC"{print substr($0,1,5)}'  "original_${name}.gro" | sort -u > "before_${name}.txt"
+## Extract DMPC residue IDs from clean.gro
+#awk 'substr($0,6,4)=="DMPC"{print substr($0,1,5)}' "remove_Residues_${name}.gro"| sort -u > "after_${name}.txt"
+## Show which DMPC residues were removed
+#comm -23 "before_${name}.txt" "after_${name}.txt"| wc -l
+
+
+gmx select -f "$GRO" \
+           -s "$TPR" \
+           -n "$NDX"\
+           -select 'group "System" and not (group "DMPC" and same residue as within 0.225 of group "rings")'\
+           -on "remain_clean.ndx"
+gmx editconf -f "$GRO"  -n "remain_clean.ndx" -o final_${name}.gro 
+awk 'substr($0,6,4)=="DMPC"{r[substr($0,1,5)]++} END{print "The final number of DMPC residues remaining in the system:",length(r)}' "final_${name}.gro"

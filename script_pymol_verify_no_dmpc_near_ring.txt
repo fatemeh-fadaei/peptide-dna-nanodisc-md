@@ -1,0 +1,28 @@
+# Define ring atoms ALA+ASP+GLN+GLU+GLY+PHE+TRP+TYR+VAL
+#pos:select my_peptide, resn ASP+TRP+PHE+LYS+ALA+TYR+VAL+GLU+GLY
+select DMPC_count, resn DMPC and name P
+select phe_ring, resn PHE and name CG+CD1+CD2+CE1+CE2+CZ
+select tyr_ring, resn TYR and name CG+CD1+CD2+CE1+CE2+CZ
+select trp_ring, resn TRP and name CG+CD1+CD2+NE1+CE2+CE3+CZ2+CZ3+CH2
+
+
+
+
+select upper, resn DMPC and resi 561-736 and name p
+# Select DMPC within 2 Å of each ring
+select DMPC_all, resn DMPC 
+select solvent
+select ions, resn NA+CL
+select DNA, resn DA+DT+DC+DG+TO3+TO5
+# Show rings as sticks
+show sticks, phe_ring or tyr_ring or trp_ring 
+color yellow, phe_ring
+color cyan, tyr_ring
+color magenta, trp_ring
+
+
+
+
+select phe_dmpc_close, resn DMPC within 2.2 of phe_ring
+select tyr_dmpc_close, resn DMPC within 2.2 of tyr_ring
+select trp_dmpc_close, resn DMPC within 2.2 of trp_ring

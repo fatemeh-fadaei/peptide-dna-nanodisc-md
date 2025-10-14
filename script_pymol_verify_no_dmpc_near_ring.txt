@@ -19,10 +19,10 @@ show sticks, phe_ring or tyr_ring or trp_ring
 color yellow, phe_ring
 color cyan, tyr_ring
 color magenta, trp_ring
-
-
-
-
 select phe_dmpc_close, resn DMPC within 2.2 of phe_ring
 select tyr_dmpc_close, resn DMPC within 2.2 of tyr_ring
 select trp_dmpc_close, resn DMPC within 2.2 of trp_ring
+
+#
+select dmpc_close, byres (resn DMPC within 2.2 of (phe_ring or tyr_ring or trp_ring))
+show sticks, dmpc_close

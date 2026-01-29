@@ -1,0 +1,11 @@
+JOB="neg02_392DMPC_recbox_w_NaCl"
+gmx make_ndx -f $JOB.gro -o $JOB.ndx<<EOF
+1 &! a H* N CA C P O2P O1P O5' O3' C5' C4' C3' O4' C2' C1' 
+1 & a N CA C P O2P O1P O5' O3' C5' C4' C3' O4' C2' C1'
+q
+EOF
+gmx editconf -f $JOB.gro -n $JOB.ndx -o restrain_backbone_DNA_PEP.gro
+gmx genrestr -f $JOB.gro -n $JOB.ndx -o restrain_backbone_DNA_PEP.itp
+
+gmx editconf -f $JOB.gro -n $JOB.ndx -o restrain_sidechain_DNA_PEP.gro
+gmx genrestr -f $JOB.gro -n $JOB.ndx -o restrain_sidechain_DNA_PEP.itp

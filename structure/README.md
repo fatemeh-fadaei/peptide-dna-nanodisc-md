@@ -9,3 +9,6 @@ Scripts used to build and prepare the peptide–DNA nanodisc system for molecula
   
 * [check_dmpc_ring_piercing.sh](check_dmpc_ring_piercing.sh)  
   Removes DMPC lipids that penetrate aromatic ring regions and generates a cleaned structure with reduced lipid–protein clashes.
+
+  * [build_bp_distance_restraints.ipynb](build_bp_distance_restraints.ipynb)  
+  Generates base-pair distance restraints and writes them into GROMACS topology format.

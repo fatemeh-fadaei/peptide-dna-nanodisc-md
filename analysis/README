@@ -1,5 +1,8 @@
-#Analysis Scripts
+# Analysis Scripts
 
 This folder contains scripts for analyzing molecular dynamics (MD) simulations of peptide–DNA nanodiscs, with a focus on lipid–protein interactions.
-*[analysis_protein_residue_to_dmpc_tail_distance.sh](analysis_protein_residue_to_dmpc_tail_distance.sh)
-:Computes the minimum distance between protein residues and DMPC lipid tail atoms using GROMACS `gmx pairdist`.
+
+---
+
+- [analysis_protein_residue_to_dmpc_tail_distance.sh](analysis_protein_residue_to_dmpc_tail_distance.sh)  
+  Computes the minimum distance between protein residues and DMPC lipid tail atoms using GROMACS `gmx pairdist`.

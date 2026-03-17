@@ -13,3 +13,6 @@ This folder contains scripts for analyzing molecular dynamics (MD) simulations o
 
 * [residue_dmpc_distance_plot.py](residue_dmpc_distance_plot.py)
 Computes and plots average protein–DMPC distances per residue across multiple chains.
+
+* [plot_tilt_angle_time_comparison.ipynb](plot_tilt_angle_time_comparison.ipynb)  
+  Plots the smoothed average tilt angle vs time for multiple chains and compares systems.

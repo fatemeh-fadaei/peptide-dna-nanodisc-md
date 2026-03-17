@@ -21,3 +21,5 @@ Scripts used to build and prepare the peptide–DNA nanodisc system for molecula
 
 * [check_analyze_nanodisc_sequence_patterns.ipynb](check_analyze_nanodisc_sequence_patterns.ipynb)
    Analyzes DNA sequence motifs and peptide sequences in nanodisc systems. 
+* [supercomputer_merge_gro_pdb.py](supercomputer_merge_gro_pdb.py)
+  Merges DNA and DMPC structures into a single `.gro` file.

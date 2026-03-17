@@ -12,3 +12,6 @@ Scripts used to build and prepare the peptide–DNA nanodisc system for molecula
 
 * [build_bp_distance_restraints.ipynb](build_bp_distance_restraints.ipynb)  
   Generates base-pair distance restraints and writes them into GROMACS topology format.
+
+* [define_backbone_sidechain_groups.sh](define_backbone_sidechain_groups.sh) 
+  Creates backbone and side-chain groups and generates position restraint files for MD simulations.

@@ -18,3 +18,6 @@ Scripts used to build and prepare the peptide–DNA nanodisc system for molecula
   
 * [estimate_lipid_count_from_diameter.ipynb](estimate_lipid_count_from_diameter.ipynb) 
   Estimates the number of lipids in a nanodisc from its diameter using geometric calculations.
+
+* [check_analyze_nanodisc_sequence_patterns.ipynb](check_analyze_nanodisc_sequence_patterns.ipynb)
+   Analyzes DNA sequence motifs and peptide sequences in nanodisc systems. 

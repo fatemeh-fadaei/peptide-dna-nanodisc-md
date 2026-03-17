@@ -16,3 +16,6 @@ Computes and plots average protein–DMPC distances per residue across multiple 
 
 * [plot_tilt_angle_time_comparison.ipynb](plot_tilt_angle_time_comparison.ipynb)  
   Plots the smoothed average tilt angle vs time for multiple chains and compares systems.
+
+* [pymol_verify_no_dmpc_near_ring.py](pymol_verify_no_dmpc_near_ring.py)
+PyMOL script to detect and visualize DMPC lipids within 2.2 Å of aromatic residues (PHE, TYR, TRP).

@@ -10,3 +10,6 @@ This folder contains scripts for analyzing molecular dynamics (MD) simulations o
 
 * [chain_tilt_angle_vs_z.sh](chain_tilt_angle_vs_z.sh)  
   Calculates tilt angles of peptide chains relative to the z-axis using `gmx gangle`.
+
+* [residue_dmpc_distance_plot.py](residue_dmpc_distance_plot.py)
+Computes and plots average protein–DMPC distances per residue across multiple chains.

@@ -15,3 +15,6 @@ Scripts used to build and prepare the peptide–DNA nanodisc system for molecula
 
 * [define_backbone_sidechain_groups.sh](define_backbone_sidechain_groups.sh) 
   Creates backbone and side-chain groups and generates position restraint files for MD simulations.
+  
+* [estimate_lipid_count_from_diameter.ipynb](estimate_lipid_count_from_diameter.ipynb) 
+  Estimates the number of lipids in a nanodisc from its diameter using geometric calculations.

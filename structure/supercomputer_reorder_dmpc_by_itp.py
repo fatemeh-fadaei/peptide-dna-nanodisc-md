@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-#python reorder_dmpc_by_itp.py   --pdb system.pdb --itp /fs/ess/PGS0330/fatemeh/nanodiscs_peptides/negative/neg02/topologies/DMPC.itp  -o system_reordered.pdb --renumber
+#python reorder_dmpc_by_itp.py   --pdb system.pdb --itp DMPC.itp  -o system_reordered.pdb --renumber
 
 
 

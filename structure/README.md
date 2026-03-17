@@ -14,13 +14,13 @@ Scripts used to build and prepare the peptide–DNA nanodisc system for molecula
   Generates base-pair distance restraints and writes them into GROMACS topology format.
 
 * [define_backbone_sidechain_groups.sh](define_backbone_sidechain_groups.sh) 
-  Creates backbone and side-chain groups and generates position restraint files for MD simulations.
+   Creates backbone and side-chain groups and generates position restraint files for MD simulations.
   
 * [estimate_lipid_count_from_diameter.ipynb](estimate_lipid_count_from_diameter.ipynb) 
-  Estimates the number of lipids in a nanodisc from its diameter using geometric calculations.
+   Estimates the number of lipids in a nanodisc from its diameter using geometric calculations.
 
 * [check_analyze_nanodisc_sequence_patterns.ipynb](check_analyze_nanodisc_sequence_patterns.ipynb)
-   Analyzes DNA sequence motifs and peptide sequences in nanodisc systems. 
+  Analyzes DNA sequence motifs and peptide sequences in nanodisc systems. 
 * [supercomputer_merge_gro_pdb.py](supercomputer_merge_gro_pdb.py)
   Merges DNA and DMPC structures into a single `.gro` file.
 

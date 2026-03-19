@@ -22,3 +22,5 @@ This folder contains scripts for analyzing molecular dynamics (MD) simulations o
 
 * [pymol_dna_nanodisc_neg4f_visualization.ipynb](pymol_dna_nanodisc_neg4f_visualization.ipynb)
   PyMOL visualization of DNA–lipid nanodisc with peptide(neg4f) conjugates
+* [pymol_dna_nanodisc_zi4f_visualization.ipynb](pymol_dna_nanodisc_zi4f_visualization.ipynb)
+  PyMOL visualization of DNA–lipid nanodisc with peptide(zi4f) conjugates

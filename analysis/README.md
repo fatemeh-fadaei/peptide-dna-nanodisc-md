@@ -19,3 +19,6 @@ This folder contains scripts for analyzing molecular dynamics (MD) simulations o
 
 * [pymol_verify_no_dmpc_near_ring.py](pymol_verify_no_dmpc_near_ring.py)
   PyMOL script to detect and visualize DMPC lipids within 2.2 Å of aromatic residues (PHE, TYR, TRP).
+
+* [pymol_dna_nanodisc_neg4f_visualization.ipynb](pymol_dna_nanodisc_neg4f_visualization.ipynb)
+  PyMOL visualization of DNA–lipid nanodisc with peptide(neg4f) conjugates

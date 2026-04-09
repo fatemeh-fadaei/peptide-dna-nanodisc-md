@@ -26,3 +26,7 @@ Scripts used to build and prepare the peptide–DNA nanodisc system for molecula
 
 * [supercomputer_reorder_dmpc_by_itp.py](supercomputer_reorder_dmpc_by_itp.py)
   Reorders DMPC atoms in a PDB file to match `.itp` topology ordering.
+
+*[capping_atoms_removal_scheme.cdxml](capping_atoms_removal_scheme.cdxml)
+*[GROMACS_Capping_Atoms_and_Final_Structure.png](GROMACS_Capping_Atoms_and_Final_Structure.png)
+Schematic showing selection and removal of capping atoms from 5′ and 3′ thiol modifiers prior to GROMACS parameterization

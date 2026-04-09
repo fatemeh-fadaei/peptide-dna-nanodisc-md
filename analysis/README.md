@@ -24,3 +24,23 @@ This folder contains scripts for analyzing molecular dynamics (MD) simulations o
   PyMOL visualization of DNA–lipid nanodisc with peptide(neg4f) conjugates
 * [pymol_dna_nanodisc_zi4f_visualization.ipynb](pymol_dna_nanodisc_zi4f_visualization.ipynb)
   PyMOL visualization of DNA–lipid nanodisc with peptide(zi4f) conjugates
+
+* [angle_vs_time_POS_NEG_combined_ave_withpymol.ipynb](angle_vs_time_POS_NEG_combined_ave_withpymol.ipynb)
+  This PyMOL script calculates and visualizes the tilt angle of each chain segment 
+relative to the global Z-axis. For each pair of selected CA atoms (start and end 
+of a chain segment), it:
+
+1. Computes the vector between the two atoms.
+2. Calculates the angle between this vector and the Z-axis.
+3. Displays:
+   - A red vector representing the chain direction
+   - A blue vector representing the Z-axis
+   - A yellow arc showing the angle between them
+   - A label with the angle value (in degrees)
+
+Each chain is processed independently using unique object names, allowing 
+simultaneous visualization of all chains without overwriting.
+
+Use case:
+Helpful for analyzing tilt/orientation of peptide or DNA segments 
+relative to a reference axis (e.g., membrane normal).
